@@ -6,7 +6,7 @@ import com.kodilla.testing.user.SimpleUser;
 public class TestingMain {
     public static void main(String[] args){
 
-        System.out.println("Test1: User");
+        /*System.out.println("Test1: User");
 
         SimpleUser simpleUser = new SimpleUser("theForumUser");
 
@@ -35,7 +35,7 @@ public class TestingMain {
         } else {
             System.out.println("Error!");
         }
-
+          */
 
     }
 }
