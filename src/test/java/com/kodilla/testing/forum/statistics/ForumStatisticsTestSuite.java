@@ -49,12 +49,12 @@ public class ForumStatisticsTestSuite {
         fs.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(0, fs.postsCount);
-        Assert.assertEquals(0, fs.commentsCount);
-        Assert.assertEquals(2, fs.usersCount);
-        Assert.assertEquals(0.0, fs.averagePostsPerUser,0);
-        Assert.assertEquals(0.0,fs.averageCommentsPerUser,0);
-        Assert.assertEquals(0.0,fs.averageCommentsPerPost,0);
+        Assert.assertEquals(0, fs.getPostsCount());
+        Assert.assertEquals(0, fs.getCommentsCount());
+        Assert.assertEquals(2, fs.getUsersCount());
+        Assert.assertEquals(0.0, fs.getAveragePostsPerUser(),0);
+        Assert.assertEquals(0.0,fs.getAverageCommentsPerUser(),0);
+        Assert.assertEquals(0.0,fs.getAverageCommentsPerPost(),0);
     }
 
     @Test
@@ -73,12 +73,12 @@ public class ForumStatisticsTestSuite {
         fs.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(2, fs.usersCount);
-        Assert.assertEquals(1000, fs.commentsCount);
-        Assert.assertEquals(1000, fs.postsCount);
-        Assert.assertEquals(500, fs.averagePostsPerUser,0);
-        Assert.assertEquals(500,fs.averageCommentsPerUser,0);
-        Assert.assertEquals(1.0,fs.averageCommentsPerPost,0);
+        Assert.assertEquals(2, fs.getUsersCount());
+        Assert.assertEquals(1000, fs.getCommentsCount());
+        Assert.assertEquals(1000, fs.getPostsCount());
+        Assert.assertEquals(500, fs.getAveragePostsPerUser(),0);
+        Assert.assertEquals(500,fs.getAverageCommentsPerUser(),0);
+        Assert.assertEquals(1.0,fs.getAverageCommentsPerPost(),0);
     }
 
     @Test
@@ -97,12 +97,12 @@ public class ForumStatisticsTestSuite {
         fs.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(2, fs.usersCount);
-        Assert.assertEquals(0, fs.commentsCount);
-        Assert.assertEquals(100, fs.postsCount);
-        Assert.assertEquals(50.0, fs.averagePostsPerUser,0);
-        Assert.assertEquals(0.0,fs.averageCommentsPerUser,0);
-        Assert.assertEquals(0.0,fs.averageCommentsPerPost,0);
+        Assert.assertEquals(2, fs.getUsersCount());
+        Assert.assertEquals(0, fs.getCommentsCount());
+        Assert.assertEquals(100, fs.getPostsCount());
+        Assert.assertEquals(50.0, fs.getAveragePostsPerUser(),0);
+        Assert.assertEquals(0.0,fs.getAverageCommentsPerUser(),0);
+        Assert.assertEquals(0.0,fs.getAverageCommentsPerPost(),0);
     }
 
  @Test
@@ -121,13 +121,13 @@ public class ForumStatisticsTestSuite {
      fs.calculateAdvStatistics(statisticsMock);
 
      //Then
-     Assert.assertEquals(2, fs.usersCount);
-     Assert.assertEquals(10, fs.commentsCount);
-     Assert.assertEquals(100, fs.postsCount);
-     Assert.assertEquals(50.0, fs.averagePostsPerUser,0);
-     Assert.assertEquals(5.0,fs.averageCommentsPerUser,0);
-     Assert.assertEquals(0.1,fs.averageCommentsPerPost,0);
-     Assert.assertTrue(fs.averageCommentsPerPost < 1);
+     Assert.assertEquals(2, fs.getUsersCount());
+     Assert.assertEquals(10, fs.getCommentsCount());
+     Assert.assertEquals(100, fs.getPostsCount());
+     Assert.assertEquals(50.0, fs.getAveragePostsPerUser(),0);
+     Assert.assertEquals(5.0,fs.getAverageCommentsPerUser(),0);
+     Assert.assertEquals(0.1,fs.getAverageCommentsPerPost(),0);
+     Assert.assertTrue(fs.getAverageCommentsPerPost() < 1);
  }
 
  //gdy liczba komentarzy > liczba postów,
@@ -147,13 +147,13 @@ public class ForumStatisticsTestSuite {
      fs.calculateAdvStatistics(statisticsMock);
 
      //Then
-     Assert.assertEquals(2, fs.usersCount);
-     Assert.assertEquals(1000, fs.commentsCount);
-     Assert.assertEquals(100, fs.postsCount);
-     Assert.assertEquals(50.0, fs.averagePostsPerUser,0);
-     Assert.assertEquals(500.0,fs.averageCommentsPerUser,0);
-     Assert.assertEquals(10.0,fs.averageCommentsPerPost,0);
-     Assert.assertTrue(fs.averageCommentsPerPost > 1);
+     Assert.assertEquals(2, fs.getUsersCount());
+     Assert.assertEquals(1000, fs.getCommentsCount());
+     Assert.assertEquals(100, fs.getPostsCount());
+     Assert.assertEquals(50.0, fs.getAveragePostsPerUser(),0);
+     Assert.assertEquals(500.0,fs.getAverageCommentsPerUser(),0);
+     Assert.assertEquals(10.0,fs.getAverageCommentsPerPost(),0);
+     Assert.assertTrue(fs.getAverageCommentsPerPost() > 1);
  }
 
     @Test
@@ -171,12 +171,12 @@ public class ForumStatisticsTestSuite {
         fs.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(0, fs.usersCount);
-        Assert.assertEquals(1000, fs.commentsCount);
-        Assert.assertEquals(100, fs.postsCount);
-        Assert.assertEquals(0.0, fs.averagePostsPerUser,0);
-        Assert.assertEquals(0.0,fs.averageCommentsPerUser,0);
-        Assert.assertEquals(10.0,fs.averageCommentsPerPost,0);
+        Assert.assertEquals(0, fs.getUsersCount());
+        Assert.assertEquals(1000, fs.getCommentsCount());
+        Assert.assertEquals(100, fs.getPostsCount());
+        Assert.assertEquals(0.0, fs.getAveragePostsPerUser(),0);
+        Assert.assertEquals(0.0,fs.getAverageCommentsPerUser(),0);
+        Assert.assertEquals(10.0,fs.getAverageCommentsPerPost(),0);
     }
 
     @Test
@@ -196,12 +196,12 @@ public class ForumStatisticsTestSuite {
         fs.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(100, fs.usersCount);
-        Assert.assertEquals(1000, fs.commentsCount);
-        Assert.assertEquals(100, fs.postsCount);
-        Assert.assertEquals(1.0, fs.averagePostsPerUser,0);
-        Assert.assertEquals(10.0,fs.averageCommentsPerUser,0);
-        Assert.assertEquals(10.0,fs.averageCommentsPerPost,0);
+        Assert.assertEquals(100, fs.getUsersCount());
+        Assert.assertEquals(1000, fs.getCommentsCount());
+        Assert.assertEquals(100, fs.getPostsCount());
+        Assert.assertEquals(1.0, fs.getAveragePostsPerUser(),0);
+        Assert.assertEquals(10.0,fs.getAverageCommentsPerUser(),0);
+        Assert.assertEquals(10.0,fs.getAverageCommentsPerPost(),0);
     }
 
 }

@@ -2,12 +2,36 @@ package com.kodilla.testing.forum.statistics;
 
 public class ForumStatistics {
 
-    public int usersCount;
-    public int postsCount;
-    public int commentsCount;
-    public double averagePostsPerUser;
-    public double averageCommentsPerUser;
-    public double averageCommentsPerPost;
+    private int usersCount;
+    private int postsCount;
+    private int commentsCount;
+    private double averagePostsPerUser;
+    private double averageCommentsPerUser;
+    private double averageCommentsPerPost;
+
+    public int getUsersCount() {
+        return usersCount;
+    }
+
+    public int getPostsCount() {
+        return postsCount;
+    }
+
+    public int getCommentsCount() {
+        return commentsCount;
+    }
+
+    public double getAveragePostsPerUser() {
+        return averagePostsPerUser;
+    }
+
+    public double getAverageCommentsPerUser() {
+        return averageCommentsPerUser;
+    }
+
+    public double getAverageCommentsPerPost() {
+        return averageCommentsPerPost;
+    }
 
     public void calculateAdvStatistics(Statistics statistics){
         /*liczbę użytkowników,
