@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-08-27T19:09:26" hostname="LAPTOP-PL45QG0M" time="0.183">
+  <properties/>
+  <testcase name="calculateAdvStatisticsPosts1000" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.173"/>
+  <testcase name="calculateAdvStatisticsUsers100" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.002"/>
+  <testcase name="calculateAdvStatisticsComments0" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.002"/>
+  <testcase name="calculateAdvStatisticsPosts0" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="calculateAdvStatisticsUsers0" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="calculateAdvStatisticsCommentsLessThanPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="calculateAdvStatisticsCommentsMoreThanPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <system-out><![CDATA[ForumStatistics Test Suite - start
+Test number 1 started
+Test number 1 ended
+Test number 2 started
+Test number 2 ended
+Test number 3 started
+Test number 3 ended
+Test number 4 started
+Test number 4 ended
+Test number 5 started
+Test number 5 ended
+Test number 6 started
+Test number 6 ended
+Test number 7 started
+Test number 7 ended
+ForumStatistics Test Suite - all test are finished
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
