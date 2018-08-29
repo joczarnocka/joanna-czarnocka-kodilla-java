@@ -1,6 +1,7 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.PoemBeautifuler;
+import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.*;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
@@ -30,17 +31,20 @@ public class StreamMain {
 
         // moduł 7 zadanie 1
         System.out.println("Beautified texts");
-        PoemBeautifuler beaufifuler = new PoemBeautifuler();
+        PoemBeautifuler beautifuler = new PoemBeautifuler();
         String str = "basic text";
-        String bStr = beaufifuler.beautify(str,s -> "ABC" + s + "ABC");
+        String bStr = beautifuler.beautify(str,s -> "ABC" + s + "ABC");
         System.out.println(bStr);
-        bStr = beaufifuler.beautify(str,s -> s.toUpperCase());
+        bStr = beautifuler.beautify(str,s -> s.toUpperCase());
         System.out.println(bStr);
-        bStr = beaufifuler.beautify(str,s -> "<bold>" + s + "</bold>");
+        bStr = beautifuler.beautify(str,s -> "<bold>" + s + "</bold>");
         System.out.println(bStr);
-        bStr = beaufifuler.beautify(str,s -> s.replaceAll("basic","BEUTIFUL"));
+        bStr = beautifuler.beautify(str,s -> s.replaceAll("basic","BEUTIFUL"));
         System.out.println(bStr);
-        bStr = beaufifuler.beautify(str,s -> s + "*************");
+        bStr = beautifuler.beautify(str,s -> s + "*************");
         System.out.println(bStr);
+
+        System.out.println("Using Stream to generate even numbers from 1 to 20");
+        NumbersGenerator.generateEven(20);
     }
 }
