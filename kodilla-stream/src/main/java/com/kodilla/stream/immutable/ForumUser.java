@@ -1,9 +1,9 @@
 package com.kodilla.stream.immutable;
 
 public final class ForumUser {
-/*
-  Klasa niemutowalna
- */
+    /*
+      Klasa niemutowalna
+     */
     private final String username;
     private final String realName;
 
