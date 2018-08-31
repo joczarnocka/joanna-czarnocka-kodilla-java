@@ -9,7 +9,10 @@ public interface ArrayOperations {
 
         IntStream.range(0,numbers.length)
                  .map(n -> numbers[n])
-                  .forEach(System.out::println);
+                      .forEach(System.out::println);
+
+        if (numbers.length == 0)
+                return 0.0;
 
         OptionalDouble avg = IntStream.range(0,numbers.length)
                 .map(n -> numbers[n]).average();
