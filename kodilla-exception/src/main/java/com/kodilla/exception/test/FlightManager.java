@@ -17,13 +17,11 @@ public class FlightManager {
         flights.put("Hamburg",true);
         flights.put("Moscow",true);
 
-        if (flights.get(flight.getDepartureAirport()) == null ||
-                flights.get(flight.getArrivalAirport()) == null){
-            throw new RouteNotFoundException("Non-existing airport");
+        if (! flights.containsKey(flight.getArrivalAirport())){
+            throw new RouteNotFoundException("Non-existing arrival airport: " + flight.getArrivalAirport());
         }
 
-        if (flights.get(flight.getDepartureAirport())
-                    && flights.get(flight.getArrivalAirport())) {
+        if (flights.get(flight.getArrivalAirport())) {
                 System.out.println("Connection is possible");
                 return true;
 
