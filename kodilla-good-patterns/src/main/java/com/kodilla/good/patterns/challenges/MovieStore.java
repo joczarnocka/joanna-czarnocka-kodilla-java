@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 class MovieStore {
 
     private final static String SEPARATOR_EM = "!";
-    private final static String EMPTY_STRING = "";
 
     public Map<String, List<String>> getMovies() {
 
@@ -34,11 +34,10 @@ class MovieStore {
 
     public void printMovies(String separator) {
         String totalTitles = getMovies()
-                .entrySet()
+                .values()
                 .stream()
-                .flatMap(l -> l.getValue().stream())
-                .reduce(EMPTY_STRING, (total, current) -> total + separator + current)
-                .substring(1);
+                .flatMap(l -> l.stream())
+                .collect(Collectors.joining(separator));
 
         System.out.println(totalTitles);
     }
