@@ -25,22 +25,21 @@ public class ConnectionsFinder {
     }
 
 
-    public List<List<Flight>> indirectFromTo(String departure, String arrival){
+    public List<Flight> indirectFromTo(String departure, String arrival){
         List<Flight> allFlightsTo = to(arrival);
-        List<List<Flight>> result = new ArrayList<>();
+        List<Flight> result = new ArrayList<>();
 
         List<Flight> allFlightsFrom = allFlightsTo
                       .stream()
                       .flatMap(f -> to(f.getDeparture()).stream())
-                      .filter(f -> (f.getDeparture() == departure))
+                      .filter(f -> (f.getDeparture().equals(departure)))
                       .collect(Collectors.toList());
 
 
         for (Flight fl: allFlightsFrom){
-            List<Flight> connection = new ArrayList<>();
-            connection.add(fl);
-            connection.add(new Flight(fl.getArrival(), arrival));
-            result.add(connection);
+            //List<Flight> connection = new ArrayList<>();
+            result.add(fl);
+            result.add(new Flight(fl.getArrival(), arrival));
         }
 
         return result;

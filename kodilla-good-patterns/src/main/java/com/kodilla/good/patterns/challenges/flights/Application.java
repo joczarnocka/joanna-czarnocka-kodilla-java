@@ -29,7 +29,10 @@ public class Application {
         cf.to(toa).stream().forEach(f -> System.out.println(f));
 
         System.out.println("\nWszystkie pośrednie połączenia z " + from + " do " + toa);
-        cf.indirectFromTo(from, toa).stream().forEach(l -> System.out.println(l));
+        cf.indirectFromTo(from, toa).stream().forEach(f -> {System.out.print(f);
+                if (f.getArrival().equals(toa)) System.out.println();
+                else System.out.print("-");
+        });
 
 
     }
