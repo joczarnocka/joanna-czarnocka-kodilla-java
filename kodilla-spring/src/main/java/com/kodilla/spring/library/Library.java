@@ -11,7 +11,7 @@ public final class Library {
 
     //private LibraryDbController libraryDbController;
 
-    @Autowired
+    //@Autowired
     private LibraryDbController libraryDbController;
 //    @Autowired
 //    public Library(final LibraryDbController libraryDbController) {
@@ -23,7 +23,12 @@ public final class Library {
  //       this.libraryDbController = libraryDbController;
   //  }
 
+    public Library(final LibraryDbController libraryDbController) {
+        this.libraryDbController = libraryDbController;
+    }
 
+    public Library() {
+    }
 
 
     public void saveToDb() {
