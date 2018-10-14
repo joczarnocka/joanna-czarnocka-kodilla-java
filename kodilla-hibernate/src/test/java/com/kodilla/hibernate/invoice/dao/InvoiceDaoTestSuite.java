@@ -39,9 +39,9 @@ public class InvoiceDaoTestSuite {
         Item item12 = new Item(product2, new BigDecimal(1000), 10, new BigDecimal(10000));
         Item item13 = new Item(product3, new BigDecimal(10000), 10, new BigDecimal(10000));
 
-//        product1.getItems().add(item11);
-//        product2.getItems().add(item12);
-//        product3.getItems().add(item13);
+        product1.getItems().add(item11);
+        product2.getItems().add(item12);
+        product3.getItems().add(item13);
 
         invoice1.getItems().add(item11);
         invoice1.getItems().add(item12);
