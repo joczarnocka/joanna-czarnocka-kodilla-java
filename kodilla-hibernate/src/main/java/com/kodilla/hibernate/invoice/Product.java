@@ -13,7 +13,7 @@ public class Product {
 
     private int id;
     private String name;
-    //private List<Item> items = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
 
     public Product() {
     }
@@ -22,7 +22,7 @@ public class Product {
         this.name = name;
     }
 
-   /*@OneToMany(targetEntity = Item.class,
+   @OneToMany(targetEntity = Item.class,
             mappedBy = "product",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
@@ -33,7 +33,7 @@ public class Product {
     public void setItems(List<Item> items) {
         this.items = items;
     }
-*/
+
     @Id
     @GeneratedValue
     @NotNull
