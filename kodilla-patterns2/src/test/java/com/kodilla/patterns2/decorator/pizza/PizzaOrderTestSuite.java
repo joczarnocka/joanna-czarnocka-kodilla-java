@@ -14,6 +14,7 @@ public class PizzaOrderTestSuite {
         Pizza thePizza = new BasicPizza();
         // When
         BigDecimal calculatedCost = thePizza.getCost();
+        System.out.println("Cena pizzy: " + calculatedCost);
         // Then
         assertEquals(new BigDecimal(15.0), calculatedCost);
     }
@@ -25,6 +26,7 @@ public class PizzaOrderTestSuite {
         Pizza thePizza = new BasicPizza();
         // When
         String description = thePizza.getDescription();
+        System.out.println("Opis pizzy: " + description);
         // Then
         assertEquals("Pizza (ciasto i sos pomidorowy z serem)",description);
     }
@@ -39,6 +41,7 @@ public class PizzaOrderTestSuite {
         thePizza =  new OnionDecorator(thePizza);
         //When
         BigDecimal theCost = thePizza.getCost();
+        System.out.println("Cena pizzy: " + theCost);
         //Then
         assertEquals(new BigDecimal(19), theCost);
     }
@@ -52,6 +55,7 @@ public class PizzaOrderTestSuite {
         thePizza =  new OnionDecorator(thePizza);
         //When
         String description= thePizza.getDescription();
+        System.out.println("Opis pizzy: " + description);
         //Then
         assertEquals("Pizza (ciasto i sos pomidorowy z serem) + olives + onion", description);
     }
@@ -66,6 +70,7 @@ public class PizzaOrderTestSuite {
         thePizza =  new OnionDecorator(thePizza);
         //When
         BigDecimal theCost = thePizza.getCost();
+        System.out.println("Cena pizzy: " + theCost);
         //Then
         assertEquals(new BigDecimal(26), theCost);
     }
@@ -80,6 +85,7 @@ public class PizzaOrderTestSuite {
         thePizza =  new OnionDecorator(thePizza);
         //When
         String description= thePizza.getDescription();
+        System.out.println("Opis pizzy: " + description);
         //Then
         assertEquals("Pizza (ciasto i sos pomidorowy z serem) + ham + mushrums + onion", description);
     }
