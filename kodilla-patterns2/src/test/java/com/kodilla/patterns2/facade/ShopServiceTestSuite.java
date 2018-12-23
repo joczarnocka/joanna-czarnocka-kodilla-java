@@ -21,7 +21,7 @@ public class ShopServiceTestSuite {
     @Autowired
     private OrderFacade orderFacade;
 
-    @Test
+   @Test
     public void testShopServiceSubmitOrder() {
         long orderId = shopService.openOrder(1L);
         System.out.println("Registering new order, ID: " + orderId);

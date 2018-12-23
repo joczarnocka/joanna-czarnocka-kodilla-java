@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 
 @Service
+@EnableAspectJAutoProxy
 public class OrderFacade {
     @Autowired
     private ShopService shopService;
