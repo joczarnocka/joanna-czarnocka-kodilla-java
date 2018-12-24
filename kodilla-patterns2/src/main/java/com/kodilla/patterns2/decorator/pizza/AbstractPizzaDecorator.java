@@ -3,7 +3,7 @@ package com.kodilla.patterns2.decorator.pizza;
 import java.math.BigDecimal;
 
 public abstract class AbstractPizzaDecorator implements Pizza{
-    Pizza pizza;
+    private Pizza pizza;
     public AbstractPizzaDecorator(Pizza pizza) {
         this.pizza = pizza;
     }
